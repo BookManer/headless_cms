@@ -1,0 +1,26 @@
+.iconAddFolder svg{
+    width: 120px;
+    height: 120px;
+    color: rgba(20, 20, 20, .1);
+    cursor: pointer;
+}
+.iconAddFolder svg,
+.actionText {
+    transition: all .4s ease;
+}
+.blockAddFolder:hover svg,
+.blockAddFolder:hover .actionText {
+    color: rgba(20, 20, 20, .4);
+}
+
+.actionText {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: rgba(20, 20, 20, .1)
+}
+
+.blockAddFolder {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}

@@ -1,0 +1,62 @@
+{
+  "name": "codovstvo-api-headless-cms",
+  "version": "1.0.0",
+  "description": "API Headless CMS. API для собственной CMS сайта. Легкий, быстрый, лаконичный.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r ts-node/register ./server/server.ts",
+    "start:watch": "nodemon --watch",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codovstvo-ru/codovstvo-api-headless-cms.git"
+  },
+  "author": "Nogotkov Andrey (https://github.com/BookManer)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codovstvo-ru/codovstvo-api-headless-cms/issues"
+  },
+  "homepage": "https://github.com/codovstvo-ru/codovstvo-api-headless-cms#readme",
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "src"
+    ],
+    "exec": "npm start",
+    "ext": "ts"
+  },
+  "dependencies": {
+    "@uiw/react-markdown-editor": "^2.0.3",
+    "@uiw/react-md-editor": "^1.14.5",
+    "argon2": "^0.27.0",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
+    "del": "^6.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "for-editor": "^0.3.5",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.2",
+    "pg": "^8.3.3",
+    "react-markdown": "^5.0.3",
+    "simplemde": "^1.11.2",
+    "validator": "^13.1.17"
+  },
+  "devDependencies": {
+    "@types/node": "^14.11.2",
+    "eslint": "^7.9.0",
+    "eslint-plugin-import": "^2.22.0",
+    "mobx-react-lite": "^3.0.1",
+    "react-router-dom": "^5.2.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3",
+    "uuid": "^8.3.0"
+  }
+}

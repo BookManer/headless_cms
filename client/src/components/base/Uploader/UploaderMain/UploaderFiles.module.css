@@ -1,0 +1,18 @@
+.uploader {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+.wrap {
+    display: grid;
+    grid-template-columns: 560px 1fr;
+}
+
+.left {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 0 60px -20px gray;
+    min-height: 100vh;
+    height: auto;
+    z-index: 9;
+}

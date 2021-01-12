@@ -1,0 +1,21 @@
+.containerActions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 2rem;
+
+    padding: 30px 50px;
+    
+    background-color: lightsteelblue;
+}
+
+.actionBlock {
+    width: 100%;
+    max-width: 320px;
+}
+
+.actionGroup {
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: .5em;
+}

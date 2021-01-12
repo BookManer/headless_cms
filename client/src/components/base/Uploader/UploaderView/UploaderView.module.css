@@ -1,0 +1,21 @@
+.viewFiles {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    grid-gap: 3rem;
+    justify-content: center;
+    align-items: start;
+
+    padding: 50px;
+}
+
+.listFiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.infoBlock {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 560px;
+}

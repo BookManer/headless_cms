@@ -1,0 +1,27 @@
+version: "3.1"
+
+services:
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD_FILE: "/run/secrets/postgres-password"
+      POSTGRES_USER: admin
+      POSTGRES_DB: cms-api
+      #PGDATA: /tmp
+    volumes:
+      - data:/var/lib/postgresql/data
+      - "$PWD/etc/secrets/postgres-password.txt:/run/secrets/postgres-password"
+      - "$PWD/my-postgres.conf:/etc/postgresql/postgresql.conf"
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+volumes:
+  data:
+    external: true

@@ -1,0 +1,147 @@
+.wrap {
+    position: relative;
+}
+.item {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    padding: .4rem 1rem;
+    user-select: none;
+
+    z-index: 0;
+}
+/* State: Searched */
+.item.searched {
+    align-items: center;
+    background-color: rgba(24, 144, 255, .6);
+}
+.item.searched .iconDeleteItem svg,
+.item.searched .iconFile svg,
+.item.searched .iconFolder svg {
+    color: black;
+}
+.item.searched .countFiles {
+    color: white;
+    background-color: black;
+}
+
+.iconFolderPreivew {
+    width: 50px;
+    height: auto;
+}
+.item, .item > * {
+    transition: all .4s ease;
+}
+.item:hover {
+    margin-left: .25rem;
+    background-color: rgba(0, 20, 220, .1);
+    cursor: pointer;
+}
+.countFiles {
+    font-size: 8px;
+    width: 1rem;
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 1rem;
+
+    background-color: lightgray;
+    color: black;
+    border-radius: 50%;
+}
+
+.fakeTextarea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.dragenter .fakeTextarea { 
+    z-index: 9;
+}
+
+.childrens:not(.open) {
+    display: none;
+} 
+.childrens.open {
+    display: block;
+}
+
+.nameFolder {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 1;
+}
+
+.childrens {
+    margin-left: 1.5rem;
+    border-left: 2px solid rgba(20, 20, 220, .1);
+}
+.childrensFocus {
+    border-left: 2px solid rgba(24, 144, 255, .6);
+}
+
+.iconFolder svg {
+    font-size: 1.3em;
+    
+    margin-right: .5rem;
+    color: gold;
+}
+.iconFile svg {
+    font-size: 1.3em;
+    margin-right: 0.5rem;
+    color:  #1890ff;
+}
+.iconDeleteItem svg {
+    font-size: 1em;
+    transition: font-size .2s ease;
+    color: tomato;
+}
+.iconDeleteItem:hover svg {
+    font-size: 1.4em;
+}
+.iconDeleteItem {
+    margin-left: auto;
+}
+
+.dragenter {
+    background-color: rgba(20, 220, 220, .2)
+}
+
+.addFolderBlock {
+    display: flex;
+
+    padding: 1rem;
+    /* background-color: rgba(20, 20, 20, .05); */
+}
+.addFolderBlock, .addFolderBlock * {
+    transition: all .1s ease;
+}
+.addFolderBlock:hover {
+    background-color: rgba(20, 20, 20, .1);
+    cursor: pointer;
+}
+.addFolderBlock:hover .addFolderMessage,
+.addFolderBlock:hover .iconAddFolder svg {
+    color: black;
+    cursor: pointer;
+}
+.iconAddFolder svg {
+    font-size: 1.2rem;
+    color: rgba(20, 20, 20, .5);
+}
+.addFolderMessage {
+    color: rgba(20, 20, 20, .5);
+    margin-left: 1rem;
+}
